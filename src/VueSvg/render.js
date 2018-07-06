@@ -3,7 +3,6 @@ export default function(createElement) {
 		svgAttributes,
 		svgContent,
 	} = this;
-
 	return createElement('svg', {
 		attrs: svgAttributes,
 		domProps: {

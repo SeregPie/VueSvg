@@ -2,19 +2,19 @@
 	"name": "@seregpie/vuesvg",
 	"version": "18.7.9",
 	"description": "Loads a SVG image as an inline SVG.",
-	"main": "VueSvg.js",
-	"scripts": {
-		"build": "rollup -c",
-		"prepublishOnly": "npm run build"
-	},
-	"repository": "https://github.com/SeregPie/VueSvg.git",
 	"keywords": [
 		"component",
 		"svg",
 		"vue"
 	],
-	"author": "Sergej Sintschilin <seregpie@gmail.com>",
 	"license": "MIT",
+	"author": "Sergej Sintschilin <seregpie@gmail.com>",
+	"main": "VueSvg.js",
+	"repository": "https://github.com/SeregPie/VueSvg.git",
+	"scripts": {
+		"build": "rollup -c",
+		"prepublishOnly": "npm run build"
+	},
 	"dependencies": {
 		"vue": "^2.5.16"
 	},

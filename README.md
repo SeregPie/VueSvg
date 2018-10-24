@@ -27,16 +27,16 @@ Vue.component(VueSvg.name, VueSvg);
 
 *or*
 
-Register the component in the scope of another instance.
+Register the component in the scope of another component.
 
 ```javascript
 import VueSvg from '@seregpie/vuesvg';
 
 export default {
-  // ...
   components: {
     [VueSvg.name]: VueSvg,
   },
+  /*...*/
 };
 ```
 
@@ -52,5 +52,9 @@ If Vue is detected, the component will be registered automatically.
 ## usage
 
 ```html
-<vue-svg width="24px" height="24px" src="https://unpkg.com/simple-icons/icons/github.svg"/>
+<vue-svg
+  height="24px"
+  src="https://unpkg.com/simple-icons/icons/github.svg"
+  width="24px"
+/>
 ```

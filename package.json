@@ -1,6 +1,6 @@
 {
 	"name": "@seregpie/vuesvg",
-	"version": "18.10.24",
+	"version": "19.0.0",
 	"description": "Loads a SVG image as an inline SVG.",
 	"keywords": [
 		"component",

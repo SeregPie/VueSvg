@@ -1,32 +1,32 @@
 import Document_createElement from '../../utils/Document/createElement';
 import Http_get from '../../utils/Http/get';
 
-import svgAttributes from '../constants/defaultSvgAttributes';
-import svgChildren from '../constants/defaultSvgChildren';
-
 export default {
 	handler(src) {
-		if (src) {
-			Http_get(src).then(svg => {
-				let svgElement = Document_createElement('div', svg).children[0];
-				let svgAttributes = {};
-				Array
-					.from(svgElement.attributes)
-					.forEach(({name, value}) => {
-						svgAttributes[name] = value;
+		let svgAttributes = {};
+		let svgContent = '';
+		Promise
+			.resolve()
+			.then(() => {
+				if (src) {
+					return Http_get(src).then(html => {
+						let divElement = Document_createElement('div', html);
+						if (divElement.children.length) {
+							let [svgElement] = divElement.children;
+							Array.from(svgElement.attributes).forEach(({name, value}) => {
+								svgAttributes[name] = value;
+							});
+							svgContent = svgElement.innerHTML;
+						}
 					});
-				let svgChildren = svgElement.childNodes;
+				}
+			})
+			.then(() => {
 				Object.assign(this, {
 					svgAttributes,
-					svgChildren,
+					svgContent,
 				});
 			});
-		} else {
-			Object.assign(this, {
-				svgAttributes,
-				svgChildren,
-			});
-		}
 	},
 	immediate: true,
 };

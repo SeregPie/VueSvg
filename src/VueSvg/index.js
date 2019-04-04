@@ -1,14 +1,13 @@
-import VueFrozenData from '../utils/Vue/FrozenData';
-
+import data  from './data';
+import name from './name';
 import props from './props';
-import frozenData  from './frozenData';
-import watch from './watch';
 import render from './render';
+import watch from './watch';
 
 export default {
-	name: 'VueSvg',
-	mixins: [VueFrozenData(frozenData)],
+	data,
+	name,
 	props,
-	watch,
 	render,
+	watch,
 };

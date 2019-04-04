@@ -2,16 +2,12 @@
 
 Loads a SVG image as an inline SVG.
 
-## dependencies
-
-- [Vue](https://github.com/vuejs/vue)
-
 ## setup
 
 ### npm
 
 ```shell
-npm install @seregpie/vuesvg
+npm i @seregpie/vuesvg
 ```
 
 ### ES module
@@ -36,7 +32,6 @@ export default {
   components: {
     [VueSvg.name]: VueSvg,
   },
-  /*...*/
 };
 ```
 
@@ -52,9 +47,5 @@ If Vue is detected, the component will be registered automatically.
 ## usage
 
 ```html
-<vue-svg
-  height="24px"
-  src="https://unpkg.com/simple-icons/icons/github.svg"
-  width="24px"
-/>
+<vue-svg src="https://unpkg.com/simple-icons/icons/github.svg"/>
 ```

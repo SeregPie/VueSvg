@@ -1,5 +1,5 @@
-import Document_createElement from '/utils/Document/createElement';
-import Http_get from '/utils/Http/get';
+import Document_createElement from '../../utils/Document/createElement';
+import Http_get from '../../utils/Http/get';
 
 import svgAttributes from '../constants/defaultSvgAttributes';
 import svgChildren from '../constants/defaultSvgChildren';

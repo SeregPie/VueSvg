@@ -1,4 +1,4 @@
-import VueFrozenData from '/utils/Vue/FrozenData';
+import VueFrozenData from '../utils/Vue/FrozenData';
 
 import props from './props';
 import frozenData  from './frozenData';
